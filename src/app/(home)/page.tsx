@@ -38,7 +38,7 @@ export default async function Home({
   console.log("Query he yeh bhai:",query)
   const filtvideos = await Filtfetch(query);
 console.log("Filterd Data:",filtvideos.items);
-filtvideos?.items?.map((item:any) => console.log("Your Sugessions :)",item.termRoman,":",item.termArabic));
+// filtvideos?.items?.map((item:any) => console.log("Your Sugessions :)",item.termRoman,":",item.termArabic));
 
     return (
         <>

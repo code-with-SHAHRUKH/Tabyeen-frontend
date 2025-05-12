@@ -136,9 +136,9 @@ const filtered = filtvideos.filter(term =>
       {filteredResults?.length > 0 && (
         <div className="absolute z-10 mt-12 w-full rounded-md border border-gray-300 bg-white shadow-lg max-h-[300px] overflow-y-auto">
           {filteredResults.map((term) => (
-            <Link href={`/term/${term._id}`} className="block">
+            <Link href={`/term/${term._id}`} className="block" key={term._id}>
             <div
-              key={term._id}
+             
               className="cursor-pointer px-4 py-2 hover:bg-gray-100 flex justify-between items-center"
             >
               <span className="text-left">{term.termRoman}</span>
