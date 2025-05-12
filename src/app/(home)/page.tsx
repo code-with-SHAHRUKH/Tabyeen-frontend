@@ -7,8 +7,9 @@ import Loading from '@/components/Loading';
 // export const dynamic = 'force-dynamic';
 const Filtfetch = async (query:string) => {
     try {
-      console.log("Query from front",query)
-    const response = await fetch(`https://tabeyeen.up.railway.app/api/v1/videos/videos-list?search=${query}&page=1&limit=5`, {
+      console.log("Query from front is here",query)
+      const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+    const response = await fetch(`${baseUrl}/api/v1/videos/videos-list?search=${query}&page=1&limit=5`, {
       next: { revalidate: 60 }, // Cache bhi hoga, aur har 60 sec baad refresh bhi hoga
     });
 

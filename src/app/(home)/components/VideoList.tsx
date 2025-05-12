@@ -6,7 +6,11 @@ import { Video } from "@/types";
 //API Call Separate Function
 const fetchBooks = async () => {
   try {
-    const response = await fetch("https://tabeyeen.up.railway.app/api/v1/videos/videos-list", {
+    
+            const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+    // const response = await fetch(`${baseUrl}/api/v1/videos/videos-list?search=${query}&page=1&limit=5`,
+
+    const response = await fetch(`${baseUrl}/api/v1/videos/videos-list`, {
       next: { revalidate: 60 }, // Cache bhi hoga, aur har 60 sec baad refresh bhi hoga
     });
 
