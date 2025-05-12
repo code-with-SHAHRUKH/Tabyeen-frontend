@@ -1,7 +1,7 @@
 import React from 'react';
-import ClearQueryParams from '@/app/(home)/components/CleanQuery';
+// import ClearQueryParams from '@/app/(home)/components/CleanQuery';
 import { Video } from '@/types';
-import VideoPlayer from './components/VideoPlayerComponent';
+// import VideoPlayer from './components/VideoPlayerComponent';
 const SingleVideoPage = async ({ params }: { params: { termId: string } }) => {
     console.log('params', params);
     let term: Video | null = null;
@@ -36,7 +36,7 @@ const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
        <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mt-6 mb-3">
       <h1 className="text-2xl font-bold mb-2 text-gray-800">{term.termArabic}</h1>
       {term.termRoman && <p className="text-gray-600 mb-4 italic">({term.termRoman})</p>}
-<ClearQueryParams></ClearQueryParams>
+{/* <ClearQueryParams></ClearQueryParams> */}
       <div className="space-y-3">
         {term.explanationEnglish && (
           <p><strong>Explanation (English):</strong> {term.explanationEnglish}</p>
