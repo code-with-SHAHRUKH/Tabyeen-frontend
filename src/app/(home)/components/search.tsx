@@ -96,6 +96,8 @@ export default function Search({
   // const [inputValue, setInputValue] = useState(searchParams.get('query')?.toString() || '');
   const [inputValue, setInputValue] = useState('');
   const [filteredResults, setFilteredResults] = useState<Term[]>([]);
+  console.log("Input me yeh he",inputValue);
+  console.log("Dropdown things",filteredResults);
 
   useEffect(() => {
     // Filter data locally

@@ -1,6 +1,6 @@
 import React from "react";
 import VideoCard from "./VideoCard";
-import Search from "./search";
+// import Search from "./search";
 import { Video } from "@/types";
 
 //API Call Separate Function
@@ -32,11 +32,11 @@ const fetchBooks = async () => {
 const VideoList = async () => {
 
   const videos = await fetchBooks();
-console.log("All VideoFiles:",videos.items);
+console.log("All VideoFiles:",videos?.items);
   if (!videos) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[200px] text-gray-600">
-        <p className="text-lg font-semibold">⚠️ Failed to load videos. Please try again later.</p>
+        <p className="text-lg font-semibold">⚠️ Failed to load terms. Please try again later.</p>
       </div>
     );
   }

@@ -4,22 +4,39 @@ import React from 'react';
 import Image from 'next/image';
 const Navbar = () => {
     return (
-        <nav className="border-b shadow-[0px_6px_12px_rgba(255,255,255,0.7)] z-50 relative">
+      <div>
+        <nav className="border-b border-gray-200 shadow-[0px_6px_12px_rgba(255,255,255,0.7)] z-50 relative">
         <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-6">
           <div>
             <Link href="/" className="flex items-center">
-              {/* <Image
-                src="/logo.svg"
+              <Image
+                src="/book.svg"
                 width={44}
-                height={44}
+                height={38}
                 alt="Deeni-Markaz"
                 className="object-contain"
-              /> */}
-              <span className="ml-1 mt-2 text-[1.3rem] text-[#1a1a1a]">Tabeyeen</span>
+              />
+                          <span className="ml-0.5 mt-2 text-[1.4rem] text-gray-600 font-semibold tracking-wide">
+  Tabyeen ul Kitaab
+</span>
             </Link>
           </div>
         </div>
       </nav>
+      {/* ✅ New Navbar Below the Original One */}
+<nav className="bg-gradient-to-t from-gray-200 to-gray-50 border-b border-gray-200"      
+style={{
+    boxShadow:'0 1.2px 3px rgba(0, 0, 0, 0.19)'
+  }}>
+  <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 flex justify-center gap-6 text-md font-medium text-gray-700">
+    <Link href="/" className="text-blue-600">Terms</Link>
+    {/* <Link href="/" className="hover:text-blue-600">Subjects (Comming Soon)</Link> */}
+    <Link href="/" className="hover:text-blue-600">About (Comming Soon)</Link>
+  </div>
+</nav>
+
+      </div>
+
       
     );
 };
