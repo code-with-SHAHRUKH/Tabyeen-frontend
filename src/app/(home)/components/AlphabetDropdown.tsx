@@ -486,7 +486,7 @@ const filtered = filtvideos.filter(term =>
             //   <strong>English Desciption:</strong> {selectedTermDetails.explanationEnglish}
             // </p>
               <div className="text-center mb-4 border rounded-md p-2 shadow-sm">
-          <label className="block text-md font-semibold text-gray-600 dark:text-gray-300 mb-1 p-2">
+          <label className="block text-md font-semibold text-gray-700 dark:text-gray-300 mb-1 p-2">
             English Desciption
           </label>
           <p className="text-base leading-relaxed font-urdu">
@@ -497,7 +497,7 @@ const filtered = filtvideos.filter(term =>
 
           {selectedTermDetails?.explanationUrdu && allowUrdDesc && (
               <div className="text-center mb-4 border rounded-md p-2 shadow-sm">
-          <label className="block text-md font-semibold text-gray-600 dark:text-gray-300 mb-1 p-2">
+          <label className="block text-md font-semibold text-gray-700 dark:text-gray-300 mb-1 p-2">
             Urdu Desciption
           </label>
           <p className="text-base leading-relaxed font-urdu">
@@ -507,7 +507,7 @@ const filtered = filtvideos.filter(term =>
           )}
           {selectedTermDetails?.explanationHindi && allowHindDesc && (
                  <div className="text-center mb-4 border border rounded-md p-2 shadow-sm">
-          <label className="block text-md font-semibold text-gray-600 dark:text-gray-300 mb-1 p-2">
+          <label className="block text-md font-semibold text-gray-700 dark:text-gray-300 mb-1 p-2">
             Hindi Desciption
           </label>
           <p className="text-base leading-relaxed font-urdu">
