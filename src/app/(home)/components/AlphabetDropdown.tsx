@@ -424,7 +424,7 @@ const filtered = filtvideos.filter(term =>
 
 
       <div className="flex flex-col md:flex-row gap-4 mt-4">
-        {/* Terms Dropdown List (Left - Narrower) */}
+       
 <div className="w-full md:w-1/4 border rounded-lg pb-0 bg-white shadow mx-auto min-h-[200px] self-start">
   <h2 className="text-xl font-semibold text-gray-700 mb-1 border-b rounded-t-lg border-gray-200  pb-4 pt-4 text-center bg-gradient-to-t from-gray-50 to-gray-300">
     Terms for '{selected?.toUpperCase()}'
@@ -531,13 +531,13 @@ const filtered = filtvideos.filter(term =>
         {/* Reference Box */}
        { selectedTermDetails.reference &&
         <div className="flex-1 bg-gray-50 border border-iman-border-light-brown rounded-lg p-2 text-center">
-        {/* Or use: bg-[#FFFBEB] border-[#F5E7C3] if not using custom config colors */}
+     
           <h3 className="text-gray-600 font-semibold text-base mb-1">
-          {/* Or use: text-[#BF5700] */}
+        
             Reference
           </h3>
           <p className="text-[#007B77] text-sm">
-          {/* Or use: text-[#BF5700] */}
+         
              {selectedTermDetails.reference}
           </p>
         </div>
@@ -546,9 +546,9 @@ const filtered = filtvideos.filter(term =>
         {/* Video Resource Box */}
            { selectedTermDetails?.videoLink &&
         <div className="flex-1 bg-gray-50 border rounded-lg p-2 text-center">
-        {/* Or use: bg-[#FFFBEB] border-[#F5E7C3] */}
+      
           <h3 className="text-gray-600 font-semibold text-base mb-1">
-          {/* Or use: text-[#BF5700] */}
+   
             Video Resource
           </h3>
           <a
@@ -557,7 +557,7 @@ const filtered = filtvideos.filter(term =>
             rel="noopener noreferrer"
             className="inline-flex items-center text-[#007B77] text-sm hover:underline"
           >
-            {/* Or use: text-[#007B77] */}
+          
              <div className="flex items-center justify-center w-7 h-7 rounded-full bg-red-600 mr-2 p-1 pl-1" style={{ boxShadow: 'inset 0 1.8px 2.8px rgba(0, 0, 0, 0.51)' }}>
       <PlayIcon className="w-4 h-4 text-white font-bold " />
     </div>
