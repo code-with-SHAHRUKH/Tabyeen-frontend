@@ -400,7 +400,7 @@ const filtered = filtvideos.filter(term =>
         <h2 className="text-xl font-semibold text-gray-700 mb-1 rounded-t-lg border-b border-gray-200 pb-4 pt-4 text-center bg-gradient-to-t from-gray-50 to-gray-300">
           Select Any Letter
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3 px-3" style={{ direction }}>
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-12 gap-3 px-3 py-3" style={{ direction }}>
 
           {AlphaRomanorArabic.map((alphabet, index) => (
             <button
