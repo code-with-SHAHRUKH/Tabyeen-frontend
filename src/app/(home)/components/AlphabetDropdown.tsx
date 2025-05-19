@@ -1,7 +1,7 @@
 'use client';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useState, useEffect } from "react";
+import { useState, useEffect,useCallback } from "react";
 import { PlayIcon } from '@heroicons/react/24/outline';
 // import Search from "./search";
 
@@ -80,37 +80,30 @@ const [direction, setDirection] = useState<"ltr" | "rtl">("ltr");
 //   setAlphaRomanorArabic(uniqueLetters);
 // }
 
-function extractUniqueFirstLetters(
-  key: "termRoman" | "termArabic",
- 
-) {
-  const letters = alphabets
-    .map((item: any) => item[key]?.charAt(0).toUpperCase())
-    .filter(Boolean);
+const extractUniqueFirstLetters = useCallback(
+  (key: "termRoman" | "termArabic") => {
+    const letters = alphabets
+      .map((item: any) => item[key]?.charAt(0).toUpperCase())
+      .filter(Boolean);
 
-  // Arabic normalization
-  const normalizeArabic = (char: string) =>
-    char
-      .replace(/أ|إ|آ/g, "ا")
-      .replace(/ى/g, "ي")
-      .replace(/ؤ/g, "و")
-      .replace(/ئ/g, "ي");
+    // Arabic normalization
+    const normalizeArabic = (char: string) =>
+      char
+        .replace(/أ|إ|آ/g, "ا")
+        .replace(/ى/g, "ي")
+        .replace(/ؤ/g, "و")
+        .replace(/ئ/g, "ي");
 
-  const normalizedLetters =
-    key === "termArabic" ? letters.map(normalizeArabic) : letters;
+    const normalizedLetters =
+      key === "termArabic" ? letters.map(normalizeArabic) : letters;
 
-  // Unique + Conditional Sort
-  const uniqueLetters =
-    key === "termRoman"
-      ? [...new Set(normalizedLetters)].sort()
-      : [...new Set(normalizedLetters)].sort();
+    const uniqueLetters = [...new Set(normalizedLetters)].sort();
 
-  // Set direction based on language
-  setDirection(key === "termArabic" ? "rtl" : "ltr");
-
-  setAlphaRomanorArabic(uniqueLetters);
-}
-
+    setDirection(key === "termArabic" ? "rtl" : "ltr");
+    setAlphaRomanorArabic(uniqueLetters);
+  },
+  [alphabets, setDirection, setAlphaRomanorArabic] // 👈 dependencies
+);
 
 
 
