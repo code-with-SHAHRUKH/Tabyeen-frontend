@@ -187,7 +187,7 @@ useEffect(() => {
     if (selected) {
       Filtfetch(selected).then((data) => {
         console.log("Databilibili:",data);
-        setResults(data); // Save fetched results
+        setResults(data?.items); // Save fetched results
 
          // Auto-select the first term
       if (data?.items && data?.items?.length > 0) {
@@ -437,7 +437,7 @@ const filtered = filtvideos.filter(term =>
       <p className="text-gray-500 italic text-center pt-4">No terms available for this letter.</p>
     ) : (
       <div className="space-y-1">
-        {results?.items?.map((term:any, index:string) => (
+        {results?.map((term:Term, index:number) => (
           <div
             key={index}
             onClick={() => getTermDetails(term._id)}
