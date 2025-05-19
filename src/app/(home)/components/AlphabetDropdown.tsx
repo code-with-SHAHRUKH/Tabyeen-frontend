@@ -16,6 +16,7 @@ interface TermsListProps {
   terms: Term[];
 }
 
+
 export default function AlphabetDropdown({ alphabets,placeholder,filtvideos = [] }: { alphabets: any[] ,placeholder: string,  filtvideos: any[]}) {
 
 
@@ -175,7 +176,7 @@ useEffect(() => {
     extractUniqueFirstLetters("termRoman"); // Default to Roman
     setIsRomantogle(true);    
   }
-}, [alphabets]);
+}, [alphabets,extractUniqueFirstLetters]);
 
 // Once Roman alphabets are extracted, select the first alphabet
 useEffect(() => {
