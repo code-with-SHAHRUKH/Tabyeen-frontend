@@ -11,7 +11,7 @@ const SingleVideoPage = async ({ params }: { params: { termId: string } }) => {
 
 
 // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-        const response = await fetch(`https://tabeyeen.up.railway.app/api/v1/videos/single-Video/${params.termId}`, {
+        const response = await fetch(`https://tabeyeen-complete-back-end.vercel.app/api/v1/videos/single-Video/${params.termId}`, {
             // next: {
             //     revalidate: 3600,//Cache data just for 1hour ahfter that delete it from cache and add new data
             // },

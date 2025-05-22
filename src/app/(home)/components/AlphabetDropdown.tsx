@@ -117,7 +117,7 @@ const extractUniqueFirstLetters = useCallback(
     try {
       console.log("Query from front is here", query)
       // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-      const response = await fetch(`https://tabeyeen.up.railway.app/api/v1/videos/videos-list?search=${query}&page=1&limit=20`, {
+      const response = await fetch(`https://tabeyeen-complete-back-end.vercel.app/api/v1/videos/videos-list?search=${query}&page=1&limit=20`, {
         // next: { revalidate: 60 }, // Cache bhi hoga, aur har 60 sec baad refresh bhi hoga
         cache: "no-store", // Always get fresh data (No cache)
       });
@@ -143,7 +143,7 @@ const extractUniqueFirstLetters = useCallback(
 
   const fetchTermDetails = async (termId: string) => {
     try {
-      const response = await fetch(`https://tabeyeen.up.railway.app/api/v1/videos/single-Video/${termId}`, {
+      const response = await fetch(`https://tabeyeen-complete-back-end.vercel.app/api/v1/videos/single-Video/${termId}`, {
         cache: "no-store", // Always fetch fresh data
       });
 
